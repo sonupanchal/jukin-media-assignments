@@ -66,11 +66,7 @@
 			<div class="row pd " ng-if="country">
 				<div class="col-md-12" style="padding-bottom: 4%">
 					<div class="row">
-						<div class="col-md-7">
-								<div class="col-md-3">
-									<button class="btn btn-primary" ng-click="enableHome()">Back</button>
-								</div>
-						</div>
+						<div class="col-md-7"></div>
 						<div class="col-md-4" style="padding-right: 8%">
 							<input type="text" class="form-control col-md-4"
 								ng-model="searchByName" placeholder="Search By Name">
@@ -133,16 +129,20 @@
 
 					</div>
 
+					<div class="row" style="padding-top: 4%; padding-left: 7%">
 
+						<div class="col-md-9"></div>
+						<div class="col-md-3">
+							<button class="btn btn-primary" ng-click="enableHome()">Back</button>
+						</div>
+
+					</div>
 
 				</div>
 			</div>
 
 			<div ng-if="countryType && !loader" class=" row ">
-				<div class="col-md-3 text-right">
-					<button class="btn btn-primary" ng-click="enableHome()">Back</button>
-				</div>
-				<div class="col-md-1 text-right  ">
+				<div class="col-md-4 text-right  ">
 					<h5>{{ text}}:</h5>
 				</div>
 				<div class="col-md-4">
@@ -150,15 +150,14 @@
 						<option ng-repeat="y in data">{{y}}</option>
 					</select>
 				</div>
-				<div class="col-md-4">
-					<button class=" btn btn-primary" ng-click="loadCovidDetailsByInput(selectedValue)">Submit</button>
-				</div>
+				<div class="col-md-4"></div>
 				<br /> <br />
 				<div class="col-md-4"></div>
 				<div class="col-md-3"></div>
 				<div class="col-md-4 ">
 					<br /> <br />
-
+					<button class=" btn btn-primary"
+						ng-click="loadCovidDetailsByInput(selectedValue)">Submit</button>
 				</div>
 			</div>
 

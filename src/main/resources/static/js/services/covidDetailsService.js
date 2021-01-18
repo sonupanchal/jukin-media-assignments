@@ -57,7 +57,7 @@ covidApp.service('covidDetailsService',function($http){
 		}
 
 		function success(data,error){
-			console.log("data"+data.code);
+			console.log("data"+data);
 			return data.data;
 		}
 		
