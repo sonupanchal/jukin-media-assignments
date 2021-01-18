@@ -33,6 +33,8 @@ covidApp.controller('covidController',
 							$scope.countryData=data['response'];
 						}else{
 							console.log("country map data="+data);
+							data.code = data.code.sort();
+							data.countries = data.countries.sort();
 							$scope.countryData=data;
 						}
 						$scope.enableLoader=false;
@@ -59,7 +61,8 @@ covidApp.controller('covidController',
 				}
 				
 				function success(data){
-					console.log("data="+data);
+					console.log("Error="+data.status);
+					console.log("Response="+data.response);
 				}
 				
 				$scope.getTotal= function(){
